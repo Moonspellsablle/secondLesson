@@ -2,10 +2,10 @@
 #include <cmath>
 
 int getParameter(char parameter) {
-  std::cout << "Input coefficient in range [-600..600] <" << parameter << ">: ";
-  int coeff_a;
   const int RANGE_UPPER_VALUE = 600;
   const int RANGE_LOWER_VALUE = -600;
+  printf("Input coefficient in range [%d..%d] <%c>: ", RANGE_LOWER_VALUE, RANGE_UPPER_VALUE, parameter);
+  int coeff_a;
   while (!(std::cin >> coeff_a) || (coeff_a < RANGE_LOWER_VALUE || coeff_a > RANGE_UPPER_VALUE)) {
     std::cout << "Error! Re-Input coefficient <" << parameter << ">" << std::endl;
     std::cin.clear();
